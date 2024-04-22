@@ -1,0 +1,17 @@
+{
+  "name": "merkletree-example",
+  "version": "0.0.1",
+  "description": "Simple demonstration of a merkletree",
+  "main": "insurance.js",
+  "scripts": {
+    "insurance": "node insurance.js",
+    "auth": "node auth.js"
+  },
+  "author": "Philipp-Alexander Blum",
+  "license": "MIT",
+  "dependencies": {
+    "ecdh": "^0.2.0",
+    "generate-password": "^1.7.1",
+    "sha256": "^0.2.0"
+  }
+}
