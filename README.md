@@ -1,21 +1,27 @@
 # Merkle Trees and Merkle Proofs in Crypto: Code by example
 
-## What are Merkle Trees?
-
-_The MerkleProof example contains important security pracises_
-
 ##### Table of Contents
 
 [Getting Started](#getting-started)  
-[Exploring Merkle Proofs](#exploring-merkle-proofs)
+[What are Merkle Trees?](#what-are-merkle-trees)
+[Exploring Merkle Proofs](#exploring-merkle-proofs)  
 [Documentation Improvements](#documentation-improvements)
+
+### Getting Started:
+
+1. **Clone the Repository**: Use `git clone https://github.com/Citrullin/crypto-101-merkle-tree.git` to clone the repository.
+2. **Install npm Dependencies**: Navigate to the cloned directory (`cd crypto-101-merkle-tree`) and install dependencies using `npm install`.
+
+## What are Merkle Trees?
+
+_The MerkleProof example contains important security pracises_
 
 Merkle trees, also known as hash trees, are a fundamental concept in cryptography.
 At their core, they are a collection of hashed data organized in a binary tree structure.
 However, instead of going into complex technicalities, let's explore them through a simple JavaScript example.
 
 Imagine a scenario where we need to verify a user's car insurance information.
-Traditionally, this involves complex and expensive processes like document verification and identity checks.
+Traditionally, this involves complex and expensive processes like visual document verification and identity checks.
 To simplify and streamline this process, we can leverage Verifiable Credentials and Decentralized Identifiers (DID),
 especially in conjunction with Distributed Ledger Technology (DLT) like blockchain.
 
@@ -28,12 +34,23 @@ such as the driver's first name or insurance ID.
 As we move up the tree, we combine pairs of hashes at each level until we reach the root hash.
 This root hash acts as the verification point for the entire claim.
 
-But enough theory; let's explore a practical JavaScript implementation. You can find the code [here](insurance.js).
+#### Step 1. Hash every leaf
 
-### Getting Started:
+(Insert Visualization of hashing every leaf)
 
-1. **Clone the Repository**: Use `git clone https://github.com/Citrullin/crypto-101-merkle-tree.git` to clone the repository.
-2. **Install npm Dependencies**: Navigate to the cloned directory (`cd crypto-101-merkle-tree`) and install dependencies using `npm install`.
+#### Step 2. Take a pair of the hashed leafs. Combine them and hash them as well.
+
+(Insert Visualization of taking a pair of two leafs)
+
+#### Step 3. As long as you have more than one hash left, you keep taking two pairs and hash them.
+
+(Insert Visualization of moving one level up and hash)
+
+#### Step 4. Done. At some point you have only one hash left. This is your root hash.
+
+(Insert Visualization of root hash left)
+
+But enough theory; let's explore a practical JavaScript implementation. You can find the code [here](src/examples/insurance.js).
 
 ## Exploring Merkle Proofs:
 
@@ -51,15 +68,16 @@ To enhance security, passwords should always be hased together with a salt. This
 Additionally, the use of "pepper" can further strengthen defenses.
 User-specific salts add an extra layer of security, mitigating risks associated with rainbow table attacks or user information exposure.
 
-For a practical demonstration, refer to the code available in [auth.js](auth.js) or execute `npm run auth`.
+For a practical demonstration, refer to the code available in [auth.js](src/examples/auth.js) or execute `npm run auth`.
 The code is documented with comments and more advanced logging can be enabled.
 
 ## Documentation Improvements
 
-- [ ] Replace git clone with actual url
+- [ ] Add Illustrations
+- [x] Replace git clone with actual url
 - [ ] Clean code up, naming convention etc.
 - [ ] Add Links to keywords, such as DLT, DID, DAO
-- [ ] Unit tests
+- [x] Unit tests
 - [ ] More Logging capabilities
 - [ ] Extend with actual DLT backend
 - [ ] Use actual AES encryption (Browser implementation?)
