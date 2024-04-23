@@ -70,6 +70,8 @@ User-specific salts add an extra layer of security, mitigating risks associated 
 
 For a practical demonstration, refer to the code available in [auth.js](src/examples/auth.js) or execute `npm run auth`.
 The code is documented with comments and more advanced logging can be enabled.
+If you struggle to follow the code in [auth.js](src/examples/auth.js) or [MerkleTree.js](src/auth/MerkleTree.js), you should check out the unit tests in
+[Merkletree.test.js](src/auth/Merkletree.test.js).
 
 ## Documentation Improvements
 
