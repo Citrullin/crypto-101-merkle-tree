@@ -3,7 +3,7 @@
 ##### Table of Contents
 
 [Getting Started](#getting-started)  
-[What are Merkle Trees?](#what-are-merkle-trees)
+[What are Merkle Trees?](#what-are-merkle-trees)  
 [Exploring Merkle Proofs](#exploring-merkle-proofs)  
 [Documentation Improvements](#documentation-improvements)
 
