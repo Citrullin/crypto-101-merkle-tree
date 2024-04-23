@@ -4,8 +4,8 @@
   "description": "Simple demonstration of a merkletree",
   "main": "insurance.js",
   "scripts": {
-    "insurance": "node insurance.js",
-    "auth": "node auth.js"
+    "insurance": "node src/examples/insurance.js",
+    "auth": "node src/examples/auth.js"
   },
   "author": "Philipp-Alexander Blum",
   "license": "MIT",
@@ -13,5 +13,8 @@
     "ecdh": "^0.2.0",
     "generate-password": "^1.7.1",
     "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
