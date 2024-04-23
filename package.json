@@ -5,7 +5,8 @@
   "main": "insurance.js",
   "scripts": {
     "insurance": "node src/examples/insurance.js",
-    "auth": "node src/examples/auth.js"
+    "auth": "node src/examples/auth.js",
+    "test": "npx jest"
   },
   "author": "Philipp-Alexander Blum",
   "license": "MIT",
